@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema({
 
     }
 }, {timestamps: true}); 
-// Timestamps will gove you CreatedAt and Updated At automatically once
+// Timestamps will gove you CreatedAt and UpdatedAt automatically once
 // set to true..
 
 userSchema.pre('save', async function(next){
