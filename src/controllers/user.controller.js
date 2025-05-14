@@ -388,6 +388,10 @@ const getUserChannelProfile = asyncHandler(async(req,res,next) => {
     );
 });
 
+const getWatchHistory = asyncHandler(async(req,res,next) => {
+    
+});
+
 export {
     registerUser,
     loginUser,
@@ -399,4 +403,5 @@ export {
     updateUserAvatar,
     updateUserCoverImage,
     getUserChannelProfile,
+    getWatchHistory
 };
