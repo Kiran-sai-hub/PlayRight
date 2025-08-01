@@ -195,7 +195,7 @@ const changeCurrentPassword = asyncHandler(async(req,res,next) => {
     const {oldPassword, newPassword} = req.body;
 
     const user = await User.findById(req.user?._id);
-    const isPasswordCorrect = await User.isPasswordCorrect(oldPassword);
+    const isPasswordCorrect = await user.isPasswordCorrect(oldPassword);
     if(!isPasswordCorrect){
         throw new ApiError(400, "Invalid Password");
     }
@@ -286,7 +286,7 @@ const updateUserCoverImage = asyncHandler(async(req,res,next) => {
         throw new ApiError(400, "CoverImage file is missing");
     }
 
-    const coverImage = await uploadOnCloudinary(avatarLocalPath);
+    const coverImage = await uploadOnCloudinary(coverImageLocalPath);
     if(!coverImage.url){
         throw new ApiError(400, "Error while uploading Cover image");
     }
