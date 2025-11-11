@@ -115,8 +115,8 @@
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/GmKandhro/Paktube_Backend_Project.git
-   cd Paktube_Backend_Project
+   git clone https://github.com/Kiran-sai-hub/PlayRight
+   cd Playright_project
    ```
 
 2. **Install Dependencies**
